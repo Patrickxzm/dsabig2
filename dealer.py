@@ -76,16 +76,16 @@ class Dealer:
             if not s:
                 return None
             aff = [counter[k] for k in counter if counter[k]<3]
-            s = ''
+            ptt = ''
             if not aff:
-                s = 'triple*{}'
+                ptt = 'triple*{}'
             elif aff == [1]*s[0]:
-                s = 'triple*{}+single'
+                ptt = 'triple*{}+single'
             elif aff == [2]*s[0]:
-                s = 'triple*{}+pair'
+                ptt = 'triple*{}+pair'
             else:
                 return None
-            return (s.format(s[0]), s[1])
+            return (ptt.format(s[0]), s[1])
         if m == 4:
             if len(counter) > 1:                   #没有连炸
                 return None
